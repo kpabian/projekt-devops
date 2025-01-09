@@ -1,0 +1,9 @@
+on: 
+    pull_request: 
+        types: [opened, reopened]
+jobs:
+    create_docker_container:
+        runs-on: ubuntu-22.04
+        steps:
+            - name: Say hello
+              run: echo Hello World

@@ -1,6 +1,7 @@
 {
     "recommendations": [
         "ms-python.python",
-        "github.vscode-github-actions"
+        "github.vscode-github-actions",
+        "ms-azuretools.vscode-docker"
     ]
 }

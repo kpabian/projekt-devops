@@ -1,6 +1,6 @@
 on: 
     pull_request: 
-        types: [opened, reopened]
+        types: [opened, synchronize]
 env:
     REGISTRY: ghcr.io
     IMAGE_NAME: ${{ github.repository }}
@@ -35,3 +35,10 @@ jobs:
                 push: true
                 tags: ${{ steps.meta.outputs.tags }}
                 labels: ${{ steps.meta.outputs.labels }}
+    run_tests:
+        runs-on: ubuntu-22.04
+        needs: [create_docker_container]
+        steps:
+          - name: Say hello test
+            run: echo Hello Test!!1!
+

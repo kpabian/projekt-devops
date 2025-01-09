@@ -1,6 +1,6 @@
 on: 
     pull_request: 
-        types: [opened, synchronize]
+        types: [opened, reopened]
 env:
     REGISTRY: ghcr.io
     IMAGE_NAME: ${{ github.repository }}
